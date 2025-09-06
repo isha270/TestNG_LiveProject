@@ -20,7 +20,7 @@ public class LoginTest extends WebTestBase {
     public void Test1(){
         login.acceptcookies();
         login.enterusername();
-        //commit;
+        
     }
 
 
