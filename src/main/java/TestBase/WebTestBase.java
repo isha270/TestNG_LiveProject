@@ -7,6 +7,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import Utils.PropertyReader;
 
+import java.time.Duration;
+
 public class WebTestBase {
 
     public static WebDriver driver;
@@ -30,5 +32,6 @@ public class WebTestBase {
         driver.manage().window().maximize();
         driver.get(PropertyReader.getPropertyValue("url"));
         driver.manage().deleteAllCookies();
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
     }
 }
